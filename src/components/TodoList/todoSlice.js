@@ -8,13 +8,13 @@ export const todoSlice = createSlice({
     name: 'todoList',
     initialState,
     reducers: {
-        // addTodo: (state, action) => {
-        //     state.data.push(action.payload)
-        // },
-        // toggleCompleted: (state, action) => {
-        //     state.data.map(todo => todo.id === action.payload ? todo.completed = !todo.completed : todo)
+        addTodo: (state, action) => {
+            state.data.push(action.payload)
+        },
+        toggleCompleted: (state, action) => {
+            state.data.map(todo => todo.id === action.payload ? todo.completed = !todo.completed : todo)
 
-        // }
+        }
     },
     extraReducers: (builder) => {
         builder

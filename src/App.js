@@ -6,8 +6,10 @@ import { setupServer } from './fakeApis/index.js';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchTodos } from './components/TodoList/todoSlice';
+if (process.env.NODE_ENV === "development") {
+  setupServer();
+}
 
-setupServer();
 
 const { Title } = Typography;
 
