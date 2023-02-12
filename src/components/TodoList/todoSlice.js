@@ -29,7 +29,7 @@ export const todoSlice = createSlice({
                 state.data.push(action.payload)
             })
             .addCase(toggleComplete.fulfilled, (state, action) => {
-                state.data.find(todo =>
+                state.data.map(todo =>
                     todo.id === action.payload.id
                         ? todo.completed = !todo.completed
                         : todo)
